@@ -1,7 +1,7 @@
 /*
-Description:
-Input:
-Output:
+Description: an adaptation of the FizzBuzz algorithm but with a function.
+Input: adaptation of fizzbuzz
+Output: to a function
 Usage: 
 */
 
@@ -11,16 +11,22 @@ let input = getargs.getIntegerArg()
 
 
 function fizzbuzz(n){
-// TODO provide for tests for divisible for 3,5, and 15 to return desired output
+  if ( n % 15 == 0) 
+    { return `fizzbuzz`; }
+    else if (n % 3 == 0) 
+     { return `fizz`; }
+else if (n % 5 == 0)
+  { return `buzz`; }
+else { return ``; }
 }
 
 // TODO check if input is not an integer
-if ( ) {
-  // TODO provide usage statement
+if (isNaN(input) || !Number.isInteger(input)) {
+  console.log("usage: node 2-fizzbuzz-fun <integer>");
 }
 else {
   // TODO provide info to for loop to iterate from 1 to value of input
-  for ( ) {
+  for (let i = 1; i <= input; i++) {
     console.log(`${i} ${fizzbuzz(i)}`);
   }
 }
